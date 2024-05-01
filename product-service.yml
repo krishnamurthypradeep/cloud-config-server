@@ -5,6 +5,12 @@ spring:
     mongodb:
       uri: mongodb+srv://admin1234:admin1234@mern-cluster.dr4dknb.mongodb.net/merndb?retryWrites=true&w=majority&appName=mern-cluster 	    
     
-
+eureka:
+ client:
+  registerWithEureka: true
+  fetchRegistry: true
+  serviceUrl:
+   defaultZone: http://localhost:8070/eureka/ 
+   
 server:
   port: 9080
