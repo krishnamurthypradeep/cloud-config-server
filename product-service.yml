@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: product-service
+  data:
+    mongodb:
+      uri: mongodb+srv://admin1234:admin1234@mern-cluster.dr4dknb.mongodb.net/merndb?retryWrites=true&w=majority&appName=mern-cluster 	    
+    
+
+server:
+  port: 9080
