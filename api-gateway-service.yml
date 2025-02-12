@@ -46,15 +46,15 @@ spring:
               basedOnPreviousValue: false
       routes:
         
-        # - id: catalog-route
-        #   uri: lb://PRODUCT-SERVICE
-        #   predicates:
-        #     - Path=/api/products/**
-        #   filters:
-        #     - name: CircuitBreaker
-        #       args:
-        #         name: catalogCircuitBreaker
-        #         fallbackUri: forward:/catalog-fallback
+        - id: catalog-route
+          uri: lb://PRODUCT-SERVICE
+          predicates:
+            - Path=/api/products/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: catalogCircuitBreaker
+                fallbackUri: forward:/catalog-fallback
         - id: order-route
           uri: lb://ORDER-SERVICE
           predicates:
